@@ -1,6 +1,14 @@
 import React, { useState } from 'react'
-import randomColor from 'randomcolor'
+
 
 export default function Playground() {
-  useState(0)
+  const [counter, setCounter] = useState(0);
+
+  return(
+    <div>
+      {counter}
+      <button onClick={() => setCounter(counter - 1)}>-</button>
+      <button onClick={() => setCounter(counter + 1)}>+</button>
+    </div>
+  )
 }
